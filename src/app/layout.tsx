@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { ModalProvider } from '@/components/providers/modal-provider';
 import { Toaster } from "@/components/ui/toaster"
+import Navbar from '@/components/navbar/navbar';
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         <ModalProvider />
         <main className='relative flex flex-col min-h-screen'>
+          <Navbar />
           <div className='flex-grow flex-1'>{children}</div>
         </main>
         <Toaster />

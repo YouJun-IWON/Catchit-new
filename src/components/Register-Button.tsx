@@ -11,7 +11,7 @@ const RegisterButton = ({ className }: { className?: string }) => {
     <Button
       className={cn(
         className,
-        'px-12 py-8 text-black text-2xl hover:text-white bg-zinc-300'
+        'px-12 py-8 text-black text-lg sm:text-2xl hover:text-white bg-zinc-300'
       )}
       onClick={() => onOpen('register')}
     >

@@ -19,7 +19,7 @@ const NaviMobile = () => {
       <SheetContent>
         <SheetHeader>
           <SheetDescription>
-            <div className='flex flex-col space-y-4 items-start w-full text-lg text-black mt-10'>
+            <span className='flex flex-col space-y-4 items-start w-full text-lg text-black mt-10'>
               <Link href='#'>Sign in</Link>
               <Link href='/' onClick={() => onClose()}>
                 Home
@@ -27,13 +27,13 @@ const NaviMobile = () => {
               <Link href='/advertise' onClick={() => onClose()}>
                 매장 광고
               </Link>
-              <Link href='/useGuide' onClick={() => onClose()}>
+              <Link href='/customerCenter' onClick={() => onClose()}>
                 이용가이드
               </Link>
-              <Link href='/customerCenter' onClick={() => onClose()}>
+              <Link href='/useGuide' onClick={() => onClose()}>
                 고객센터
               </Link>
-            </div>
+            </span>
           </SheetDescription>
         </SheetHeader>
       </SheetContent>

@@ -21,12 +21,18 @@ import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
 import { Checkbox } from '../ui/checkbox';
 
+import { useState } from 'react';
+import PostCode from '../PostCode';
+
 const FormSchema = z.object({
+  postcode: z.string().min(2, {
+    message: '우편번호를 기입해주세요.',
+  }),
   address: z.string().min(2, {
     message: '주소를 기입해주세요.',
   }),
   detail: z.string().min(2, {
-    message: '주소를 기입해주세요.',
+    message: '상세 주소를 기입해주세요.',
   }),
   name: z.string().min(2, {
     message: '성함을 기입해주세요.',
@@ -43,9 +49,12 @@ const Register = () => {
   const { isOpen, onClose, type } = useModal();
   const isModalOpen = isOpen && type === 'register';
 
+  const [popup, setPopup] = useState(false);
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
+      postcode: '',
       address: '',
       detail: '',
       name: '',
@@ -53,6 +62,9 @@ const Register = () => {
       agree: false,
     },
   });
+
+  console.log('ppoo', form.getValues().postcode);
+  console.log('getget', form.getValues().address);
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -67,8 +79,8 @@ const Register = () => {
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
-      <DialogContent className='flex flex-col items-center justify-center py-16 px-4 gap-10'>
-        <div className='text-3xl font-bold text-center'>
+      <DialogContent className='flex flex-col items-center justify-center py-10 sm:py-20 px-4 gap-10 overflow-y-auto'>
+        <div className='text-2xl sm:text-3xl font-bold text-center'>
           <p>
             우리동네 매장 광고
             <br />
@@ -79,8 +91,33 @@ const Register = () => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className='w-2/3 space-y-6'
+            className=' sm:w-3/4 space-y-6'
           >
+            <div className='flex gap-4'>
+              <FormField
+                control={form.control}
+                name='postcode'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className='text-xl'
+                        placeholder='우편번호'
+                        {...field}
+                      />
+                    </FormControl>
+
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <Button type='button' onClick={() => setPopup(!popup)}>
+                우편번호 검색
+              </Button>
+              {popup && <PostCode setValue={form.setValue} />}
+            </div>
+
             <FormField
               control={form.control}
               name='address'
@@ -95,21 +132,23 @@ const Register = () => {
               )}
             />
 
-
-<FormField
+            <FormField
               control={form.control}
               name='detail'
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input className='text-xl' placeholder='상세주소' {...field} />
+                    <Input
+                      className='text-xl'
+                      placeholder='상세주소'
+                      {...field}
+                    />
                   </FormControl>
 
                   <FormMessage />
                 </FormItem>
               )}
             />
-
 
             <FormField
               control={form.control}

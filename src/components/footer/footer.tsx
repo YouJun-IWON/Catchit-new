@@ -12,7 +12,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className='flex mt-6 flex-col items-start gap-6'>
+      <div className='flex mt-6 flex-col w-full items-start gap-6'>
         <span className='text-sm text-gray-400'>Copyright © Univer Inc.</span>
 
         <span className='text-sm text-gray-400 leading-3'>

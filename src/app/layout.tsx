@@ -78,9 +78,7 @@ export default function RootLayout({
       </body>
       {/* <Script src='https://developers.kakao.com/sdk/js/kakao.min.js' defer /> */}
       <Script
-        src='//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'
-        defer
-      />
+         src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer/>
     </html>
   );
 }

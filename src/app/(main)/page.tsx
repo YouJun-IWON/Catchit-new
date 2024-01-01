@@ -3,11 +3,13 @@ import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 import Hero from './components/Hero';
 import Perks from './components/Perks';
 import Call from './components/Call';
+import Wants from './components/Want';
+import Apply from './components/Apply';
 
 export default function Home() {
   return (
     <>
-      <section className=' bg-gray-50'>
+      <section className='py-10 sm:py-20 bg-gray-50'>
         <MaxWidthWrapper>
           <Hero />
         </MaxWidthWrapper>
@@ -22,15 +24,27 @@ export default function Home() {
         </MaxWidthWrapper>
       </section>
 
-      <section className='  bg-gray-50'>
+      <section className='bg-gray-50'>
         <MaxWidthWrapper className='py-20'>
           <Perks />
         </MaxWidthWrapper>
       </section>
 
-      <section className='  bg-gray-100'>
+      <section className='bg-gray-100'>
         <MaxWidthWrapper className='py-20'>
           <Call />
+        </MaxWidthWrapper>
+      </section>
+
+      <section>
+        <MaxWidthWrapper className='py-20'>
+          <Wants />
+        </MaxWidthWrapper>
+      </section>
+
+      <section className='bg-gray-200'>
+        <MaxWidthWrapper className='py-20'>
+          <Apply />
         </MaxWidthWrapper>
       </section>
     </>

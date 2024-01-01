@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Logo = () => {
   return (
     <>
-      <div className='md:hidden'>
+      <Link href='/' className='md:hidden'>
         <Image
           src='/Catchit.png'
           width={150}
@@ -11,9 +12,9 @@ const Logo = () => {
           alt='logo image'
           className='translate-y-1'
         />
-      </div>
+      </Link>
 
-      <div className='max-md:hidden'>
+      <Link href='/' className='max-md:hidden'>
         <Image
           src='/Catchit.png'
           width={200}
@@ -21,7 +22,7 @@ const Logo = () => {
           alt='logo image'
           className='translate-y-1'
         />
-      </div>
+      </Link>
     </>
   );
 };

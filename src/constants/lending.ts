@@ -32,3 +32,20 @@ export const perks = [
     image: '/lending/perk-4.png',
   },
 ];
+
+export const wants = [
+  {
+    name1: '월 10만 원으로',
+    name2: '부담없이 시작해요',
+    description1: '하고 싶지만 비싸서 시작하기 어려웠던',
+    description2: '우리 매장 광고, 부담없이 시작할 수 있어요.',
+    image: '/lending/want-1.png',
+  },
+  {
+    name1: '광고비가 남았다면',
+    name2: '환급해요',
+    description1: '광고예산이 다 나가지 않고 남았다면',
+    description2: '월 정산 시 환급해드려요.',
+    image: '/lending/want-2.png',
+  },
+];

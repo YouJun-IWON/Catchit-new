@@ -4,7 +4,13 @@ import { Button } from '@/components/ui/button';
 import { useModal } from '@/hooks/use-modal-store';
 import { cn } from '@/lib/utils';
 
-const RegisterButton = ({ className }: { className?: string }) => {
+const RegisterButton = ({
+  className,
+  title,
+}: {
+  className?: string;
+  title?: string;
+}) => {
   const { onOpen } = useModal();
 
   return (
@@ -15,7 +21,7 @@ const RegisterButton = ({ className }: { className?: string }) => {
       )}
       onClick={() => onOpen('register')}
     >
-      1개월 무료로 신청하기{' '}
+      {title}
     </Button>
   );
 };

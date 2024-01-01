@@ -8,7 +8,7 @@ const siteMetadata = {
     '매장 근처 사람들을 손님으로! 불특정 다수에게 단순 노출하는 것이 아닌 고객들을 직접 방문하게 하는 광고 솔루션',
   language: 'ko-kr',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://www.pets-mas.com/', // your website URL
+  siteUrl: 'https://catchit-business.vercel.app/', // your website URL
   siteLogo: '/Catchit.png',
   socialBanner: '/Share-image.png', // add social banner in the public folder (home page capture image)
   // email: '',

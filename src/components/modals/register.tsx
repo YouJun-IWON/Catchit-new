@@ -78,7 +78,13 @@ const Register = () => {
   }
 
   return (
-    <Dialog open={isModalOpen} onOpenChange={onClose}>
+    <Dialog
+      open={isModalOpen}
+      onOpenChange={() => {
+        setPopup(false);
+        onClose();
+      }}
+    >
       <DialogContent className='flex flex-col items-center justify-center py-10 sm:py-20 px-4 gap-10 overflow-y-auto'>
         <div className='text-2xl sm:text-3xl font-bold text-center'>
           <p>
@@ -112,7 +118,7 @@ const Register = () => {
                 )}
               />
 
-              <Button type='button' onClick={() => setPopup(!popup)}>
+              <Button type='button' onClick={() => setPopup(true)}>
                 우편번호 검색
               </Button>
               {popup && <PostCode setValue={form.setValue} />}

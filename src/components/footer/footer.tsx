@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className='flex max-sm:flex-col max-sm:items-center gap-4 sm:gap-16 max-sm:px-4 justify-center py-10 sm:py-20 '>
+    <div className='flex max-sm:flex-col  items-center justify-center gap-4 sm:gap-16 max-sm:px-4  py-10 sm:py-20 '>
       <div>
         <Image
           src='/Catchit-footer.png'
@@ -12,7 +12,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className='flex mt-6 flex-col w-full items-start gap-6'>
+      <div className='flex mt-6 flex-col max-sm:w-full items-start gap-6'>
         <span className='text-sm text-gray-400'>Copyright © Univer Inc.</span>
 
         <span className='text-sm text-gray-400 leading-3'>

@@ -1,5 +1,5 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
-import CcHero from './components/CcHero';
+import CcHero from './_components/CcHero';
 
 const page = () => {
   return (

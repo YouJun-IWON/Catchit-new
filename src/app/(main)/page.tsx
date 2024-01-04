@@ -1,10 +1,10 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
 
-import Hero from './components/Hero';
-import Perks from './components/Perks';
-import Call from './components/Call';
-import Wants from './components/Want';
-import Apply from './components/Apply';
+import Hero from './_components/Hero';
+import Perks from './_components/Perks';
+import Call from './_components/Call';
+import Wants from './_components/Want';
+import Apply from './_components/Apply';
 
 export default function Home() {
   return (

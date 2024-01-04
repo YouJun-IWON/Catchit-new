@@ -1,6 +1,6 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
-import UgHero from './components/UgHero';
-import Questions from './components/Questions';
+import UgHero from './_components/UgHero';
+import Questions from './_components/Questions';
 
 const page = () => {
   return (

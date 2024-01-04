@@ -1,7 +1,7 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper';
-import AdHero from './components/AdHero';
-import Point from './components/Point';
-import Ready from './components/Carousel';
+import AdHero from './_components/AdHero';
+import Point from './_components/Point';
+import Ready from './_components/Carousel';
 
 const page = () => {
   return (

@@ -1,7 +1,9 @@
 'use client';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { useSheet } from '@/hooks/use-sheet-store';
+import { cn } from '@/lib/utils';
 import { AlignJustify } from 'lucide-react';
+import Link from 'next/link';
 
 const ActionButton = () => {
   const { onOpen } = useSheet();
@@ -12,7 +14,9 @@ const ActionButton = () => {
       </div>
 
       <div className='hidden md:flex md:space-x-4'>
-        <Button className='text-md'>로그인</Button>
+        <Link href='/auth' className={cn(buttonVariants())}>
+          로그인
+        </Link>
       </div>
     </div>
   );

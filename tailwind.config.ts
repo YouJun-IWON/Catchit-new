@@ -23,6 +23,8 @@ const config = {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
       colors: {
+        catchitBlue: '#64C9C7',
+        catchitYellow: '#F9DA4A',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

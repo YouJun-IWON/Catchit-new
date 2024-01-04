@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='container mt-10 md:mt-0 relative flex-col items-center justify-center md:grid h-[600px] sm:h-[800px] lg:max-w-none lg:grid-cols-2 lg:px-0 border-b-2 border-black'>
+    <div className='container relative flex-col items-center justify-center lg:grid h-[600px] sm:h-[800px] lg:max-w-none lg:grid-cols-2 px-0 '>
       <div className='relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex'>
         <div className='absolute inset-0 bg-zinc-900' />
         <div className='relative z-20 flex items-center text-lg font-medium gap-2'>
@@ -20,7 +20,9 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           </blockquote>
         </div>
       </div>
-      <div>{children}</div>
+      <div className='relative flex flex-col items-center justify-center bg-gray-50 h-full px-6'>
+        {children}
+      </div>
     </div>
   );
 };

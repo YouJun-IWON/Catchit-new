@@ -12,6 +12,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
 import { FcGoogle } from 'react-icons/fc';
+import { RiKakaoTalkFill } from 'react-icons/ri';
+import { SiNaver } from 'react-icons/si';
 
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
@@ -132,28 +134,77 @@ export function UserAuthForm() {
           <span className='w-full border-t' />
         </div>
         <div className='relative flex justify-center text-sm uppercase'>
-          <span className='bg-background px-2 text-muted-foreground'>또는</span>
+          <span className='bg-gray-50 px-2 text-muted-foreground'>또는</span>
         </div>
       </div>
 
-      <Button
-        variant='outline'
-        onClick={() =>
-          signIn('google', {
-            redirect: true,
-            callbackUrl: '/',
-          })
-        }
-        type='button'
-        disabled={isPending}
-      >
-        {isPending ? (
-          <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
-        ) : (
-          <FcGoogle className='mr-2 h-5 w-5' />
-        )}{' '}
-        Google
-      </Button>
+      <div className='grid grid-cols-3 gap-8'>
+        <div className='flex flex-col text-center gap-1 font-semibold'>
+          <Button
+            variant='outline'
+            className=' rounded-full'
+            // onClick={() =>
+            //   signIn('google', {
+            //     redirect: true,
+            //     callbackUrl: '/',
+            //   })
+            // }
+            type='button'
+            disabled={isPending}
+          >
+            {isPending ? (
+              <Icons.spinner className=' h-6 w-6 animate-spin' />
+            ) : (
+              <FcGoogle className=' h-8 w-8' />
+            )}
+          </Button>
+          <p>Google</p>
+        </div>
+
+        <div className='flex flex-col text-center gap-1 font-semibold'>
+          <Button
+            variant='outline'
+            className=' rounded-full'
+            // onClick={() =>
+            //   signIn('google', {
+            //     redirect: true,
+            //     callbackUrl: '/',
+            //   })
+            // }
+            type='button'
+            disabled={isPending}
+          >
+            {isPending ? (
+              <Icons.spinner className=' h-6 w-6 animate-spin' />
+            ) : (
+              <RiKakaoTalkFill className='h-8 w-8' />
+            )}
+          </Button>
+          <p>Kakao</p>
+        </div>
+
+        <div className='flex flex-col text-center gap-1 font-semibold'>
+          <Button
+            variant='outline'
+            className=' rounded-full'
+            // onClick={() =>
+            //   signIn('google', {
+            //     redirect: true,
+            //     callbackUrl: '/',
+            //   })
+            // }
+            type='button'
+            disabled={isPending}
+          >
+            {isPending ? (
+              <Icons.spinner className=' h-6 w-6 animate-spin' />
+            ) : (
+              <SiNaver className='text-green-500 h-6 w-6' />
+            )}
+          </Button>
+          <p>Naver</p>
+        </div>
+      </div>
     </div>
   );
 }

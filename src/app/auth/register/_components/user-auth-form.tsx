@@ -63,9 +63,9 @@ export function UserRegisterForm() {
                 <FormControl>
                   <Input placeholder='홍길동' {...field} />
                 </FormControl>
-                <FormDescription>
+                {/* <FormDescription>
                   주민등록상에 나와있는 실제 본인이름이야 합니다.
-                </FormDescription>
+                </FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
@@ -81,10 +81,10 @@ export function UserRegisterForm() {
                     <Input placeholder='email@gmail.com' {...field} />
                   </FormControl>
                 </Select>
-                <FormDescription>
+                {/* <FormDescription>
                   이 이메일은 본인인증과 추후 알람에 사용되므로 자주 사용하는
                   이메일로 진행할 것을 추천합니다.{' '}
-                </FormDescription>
+                </FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
@@ -105,8 +105,8 @@ export function UserRegisterForm() {
                     />
                   </FormControl>
                 </Select>
-                <FormDescription>
-                  최소 12자, 최대 30자, 소문자 / 숫자 / 특수기호 하나씩 포함
+                <FormDescription className='text-xs'>
+                  최소 12자, 소문자 / 숫자 / 특수기호 하나씩 포함
                 </FormDescription>
                 <FormMessage />
               </FormItem>

@@ -35,7 +35,7 @@ export function UserRegisterForm() {
     defaultValues: {
       email: '',
       password: '',
-      username: '',
+      name: '',
       confirmPassword: '',
     },
   });
@@ -56,7 +56,7 @@ export function UserRegisterForm() {
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
           <FormField
             control={form.control}
-            name='username'
+            name='name'
             render={({ field }) => (
               <FormItem>
                 <FormLabel>이름</FormLabel>

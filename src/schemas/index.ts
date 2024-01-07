@@ -17,7 +17,7 @@ export const LoginSchema = z.object({
 
 export const registerSchema = z
   .object({
-    username: z
+    name: z
       .string()
       .min(1, {
         message: '이름을 입력해주세요',

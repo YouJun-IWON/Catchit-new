@@ -70,15 +70,14 @@ export default function RootLayout({
         <SheetProvider />
         <ModalProvider />
         <main className='relative flex flex-col min-h-screen'>
-          <Navbar />
           <div className='flex-grow flex-1'>{children}</div>
-          <Footer />
         </main>
         <Toaster />
       </body>
-      {/* <Script src='https://developers.kakao.com/sdk/js/kakao.min.js' defer /> */}
       <Script
-         src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer/>
+        src='//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'
+        defer
+      />
     </html>
   );
 }

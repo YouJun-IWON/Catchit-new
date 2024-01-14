@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { UserAuthForm } from '@/app/auth/_components/user-auth-form';
+import { UserAuthForm } from '@/app/(main)/(routes)/auth/_components/user-auth-form';
 
 export const metadata: Metadata = {
   title: '로그인',

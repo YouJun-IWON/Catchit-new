@@ -32,7 +32,7 @@ const AdHero = () => {
 
       <div className='flex flex-col sm:hidden justify-between px-10 items-center gap-32'>
         <div className='flex flex-col h-[452px] gap-10 justify-between'>
-          <div className=' text-4xl font-bold leading-tight'>
+          <div className='text-4xl font-bold leading-tight'>
             <p>
               멀리 있는 사람보단
               <br />

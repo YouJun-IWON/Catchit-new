@@ -63,8 +63,8 @@ const Register = () => {
     },
   });
 
-  console.log('ppoo', form.getValues().postcode);
-  console.log('getget', form.getValues().address);
+  console.log('postcode', form.getValues().postcode);
+  console.log('address', form.getValues().address);
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
